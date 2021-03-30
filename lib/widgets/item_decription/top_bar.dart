@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
 
 
 import 'package:responsive_layout_web/widgets/responsive_layout.dart';
@@ -15,19 +16,19 @@ class TopBarDescription extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(kPadding),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // to have a print icon button in web and also a back button in mobile mode
           if (ResponsiveLayout.isWeb(context))
             IconButton(
               icon: Icon(
                 Icons.print_outlined,
-                color: Theme.of(context).iconTheme.color,
+                color: primaryColor,
               ),
               onPressed: () {},
             ),
           //
-          if (ResponsiveLayout.isMobile(context)) BackButton(color: Colors.black,),
-          Spacer(),
+          if (ResponsiveLayout.isMobile(context)) BackButton(color:primaryColor,),
           ConstrainedBox(
             constraints: BoxConstraints.tightFor(
             ),
@@ -41,14 +42,14 @@ class TopBarDescription extends StatelessWidget {
                   padding: MaterialStateProperty.all(
                     EdgeInsets.symmetric(
                       vertical: kPadding,
-                      horizontal: kPadding * 0.5
+                      horizontal: kPadding
                     ),
                   ),
                   backgroundColor:
-                  MaterialStateProperty.all(Theme.of(context).accentColor)),
+                  MaterialStateProperty.all(Colors.redAccent)),
               child: Text(
                 "افزودن به سبد خرید",
-                style: TextStyle(color: Colors.black.withOpacity(0.8)),
+                style: TextStyle(color: textColor),
               ),
               onPressed: () {},
             ),

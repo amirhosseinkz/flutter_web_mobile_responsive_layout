@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
 
 import 'package:responsive_layout_web/widgets/padding.dart';
 import 'badge.dart';
@@ -50,16 +51,16 @@ class DrawerItems extends StatelessWidget {
                             style:
                             Theme.of(context).textTheme.bodyText1.copyWith(
                               color: (selected)
-                                  ? Colors.white
-                                  : Colors.black.withOpacity(0.5),
+                                  ? selectedTextColor
+                                  : textColor
                             ),
                           ),
                           SizedBox(width: kPadding * 0.75,),
                           Icon(
                             icon,
                             color: (selected)
-                                ? Colors.white
-                                : Theme.of(context).iconTheme.color,
+                                ? selectedTextColor
+                                : textColor
                           ),
 
                         ],
@@ -71,7 +72,7 @@ class DrawerItems extends StatelessWidget {
             ),
           ),
         ),
-        Divider()
+        Divider(color: divider, thickness: 0.2,)
       ],
     );
   }

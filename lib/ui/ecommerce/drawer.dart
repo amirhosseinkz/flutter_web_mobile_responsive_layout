@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
 
 import 'package:responsive_layout_web/widgets/padding.dart';
 import 'package:responsive_layout_web/widgets/responsive_layout.dart';
@@ -33,62 +35,10 @@ class ECommerceDrawer extends StatelessWidget {
                   Spacer(),
 
                   // for closing the drawer in tablet and mobile mode
-                  if (!ResponsiveLayout.isWeb(context)) CloseButton(),
+                  if (!ResponsiveLayout.isWeb(context)) CloseButton(color: primaryColor,),
                 ],
               ),
-              SizedBox(height: kPadding),
-              ConstrainedBox(
-                constraints: BoxConstraints.tightFor(
-                  width: 300,
-                ),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(
-                          vertical: kPadding,
-                        ),
-                      ),
-                      backgroundColor: MaterialStateProperty.all(
-                          Colors.white.withOpacity(0.8))),
-                  child: Text(
-                    "ورود",
-                    style: TextStyle(
-                        color: Theme.of(context).primaryColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-              SizedBox(height: kPadding),
-              ConstrainedBox(
-                constraints: BoxConstraints.tightFor(
-                  width: 300,
-                ),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      padding: MaterialStateProperty.all(
-                        EdgeInsets.symmetric(
-                          vertical: kPadding,
-                        ),
-                      ),
-                      backgroundColor: MaterialStateProperty.all(Colors.white.withOpacity(0.8))),
-                  child: Text(
-                    "ثبت نام",
-                    style: TextStyle(color: Theme.of(context).primaryColor),
-                  ),
-                  onPressed: () {},
-                ),
-              ),
+
               SizedBox(height: kPadding * 2),
               DrawerItems(
                 onPressed: () {},
@@ -134,6 +84,59 @@ class ECommerceDrawer extends StatelessWidget {
                 number: 2,
               ),
               SizedBox(height: kPadding * 2),
+
+              ConstrainedBox(
+                constraints: BoxConstraints.tightFor(
+                  width: 300,
+                ),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all(
+                        EdgeInsets.symmetric(
+                          vertical: kPadding,
+                        ),
+                      ),
+                      backgroundColor: MaterialStateProperty.all(
+                          Colors.redAccent)),
+                  child: Text(
+                    "ورود",
+                    style: TextStyle(
+                        color: textColor,
+                        fontWeight: FontWeight.bold , fontSize: 18),
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+              SizedBox(height: kPadding),
+              ConstrainedBox(
+                constraints: BoxConstraints.tightFor(
+                  width: 300,
+                ),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all(
+                        EdgeInsets.symmetric(
+                          vertical: kPadding,
+                        ),
+                      ),
+                      backgroundColor: MaterialStateProperty.all( Colors.redAccent)),
+                  child: Text(
+                    "ثبت نام",
+                    style: TextStyle(color:textColor , fontSize: 18),
+                  ),
+                  onPressed: () {},
+                ),
+              ),
             ],
           ),
         ),

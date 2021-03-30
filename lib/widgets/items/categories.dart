@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
 
 
 import '../padding.dart';
@@ -50,14 +51,14 @@ class _CategoriesState extends State<Categories> {
                     ),
                     backgroundColor: MaterialStateProperty.all(
                         selectedIndex == index
-                            ? Colors.white.withOpacity(0.8)
-                            : Theme.of(context).accentColor)),
+                            ? Colors.white
+                            : Colors.white60)),
                 child: Text(
                   categories[index],
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: selectedIndex == index
-                        ? Theme.of(context).primaryColor
+                        ? selectedTextColor
                         : Colors.black.withOpacity(0.3),
                   ),
                 ),

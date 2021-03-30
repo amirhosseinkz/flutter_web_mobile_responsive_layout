@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_layout_web/models/product_item.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
 import 'package:responsive_layout_web/widgets/items/categories.dart';
 import 'package:responsive_layout_web/widgets/items/item.dart';
 import 'package:responsive_layout_web/widgets/padding.dart';
@@ -56,11 +57,11 @@ class _ECommerceItemsState extends State<ECommerceItems> {
                         onChanged: (value) {},
                         decoration: InputDecoration(
                           hintText: "Search",
-                          fillColor: Colors.white.withOpacity(0.5),
+                          fillColor: textColor,
                           filled: true,
                           suffixIcon: Padding(
                             padding: const EdgeInsets.all(kPadding * 0.70),
-                            child: Icon(Icons.search),
+                            child: Icon(Icons.search , color: iconColor,),
                           ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -74,7 +75,7 @@ class _ECommerceItemsState extends State<ECommerceItems> {
                     // having the drawer icon button in mobile && tablet
                     if (!ResponsiveLayout.isWeb(context))
                     IconButton(
-                      icon: Icon(Icons.menu),
+                      icon: Icon(Icons.menu , color: primaryColor,),
                       onPressed: () {
                         _scaffoldKey.currentState.openEndDrawer();
                       },

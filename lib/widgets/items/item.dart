@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_layout_web/models/product_item.dart';
+import 'package:responsive_layout_web/style/colors/colors.dart';
 import '../padding.dart';
 
 class ECommerceItem extends StatelessWidget {
@@ -27,7 +28,7 @@ class ECommerceItem extends StatelessWidget {
                 width: 160,
                 decoration: BoxDecoration(
                   color: selected
-                      ? Theme.of(context).primaryColor
+                      ? primaryColor
                       : Colors.white.withOpacity(0.8),
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
@@ -50,12 +51,12 @@ class ECommerceItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: kPadding / 4),
             child: Text(
               item.title,
-              style: TextStyle(color: Colors.black.withOpacity(0.5)),
+              style: TextStyle(color: textColor),
             ),
           ),
           Text(
             "${item.amount} تومان",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(fontWeight: FontWeight.bold , color: textColor),
           ),
           SizedBox(height: kPadding/2,)
         ],
