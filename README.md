@@ -1,8 +1,14 @@
 # responsive_layout_web
 
-A new Flutter application.
+flutter mobile && web responsive layout
 
-## Getting Started
+<img src="https://github.com/amirhosseinkz/flutter_web_mobile_responsive_layout/blob/master/assets/screenshot/Screenshot1.PNG"  height = "700">
+
+<img src="https://github.com/amirhosseinkz/flutter_web_mobile_responsive_layout/blob/master/assets/screenshot/Screenshot2.PNG"  height = "700">
+
+<img src="https://github.com/amirhosseinkz/flutter_web_mobile_responsive_layout/blob/master/assets/screenshot/Screenshot3.PNG"  height = "700">
+
+<img src="https://github.com/amirhosseinkz/flutter_web_mobile_responsive_layout/blob/master/assets/screenshot/Screenshot4.PNG"  height = "700">
 
 This project is a starting point for a Flutter application.
 
