@@ -22,5 +22,9 @@ class Assets {
   static const String digiTablet = 'assets/digi/tablet.jpg';
   static const String digiTent = 'assets/digi/tent.jpg';
   static const String digiWatch = 'assets/digi/watch.jpg';
+  static const String screenshotScreenshot1 = 'assets/screenshot/Screenshot1.PNG';
+  static const String screenshotScreenshot2 = 'assets/screenshot/Screenshot2.PNG';
+  static const String screenshotScreenshot3 = 'assets/screenshot/Screenshot3.PNG';
+  static const String screenshotScreenshot4 = 'assets/screenshot/Screenshot4.PNG';
 
 }
